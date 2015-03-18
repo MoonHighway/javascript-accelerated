@@ -2,7 +2,7 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: "Keania One";
+    font-family: "Keania One", serif;
     background-color: black;
     color: #008209;
 }
@@ -43,7 +43,7 @@ body, html {
     content: ":";
     padding-left: 6px;
     position: relative;
-    top: -4;
+    top: -4px;
 }
 
 #display span:nth-child(3) {
@@ -94,5 +94,5 @@ body, html {
     width: 30px;
     color: white;
     font-weight: bold;
-    font-size; 1.5em;
+    font-size: 1.5em;
 }
