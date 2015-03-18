@@ -1,0 +1,98 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Keania One";
+    background-color: black;
+    color: #008209;
+}
+
+#clock {
+    width: 400px;
+    border: solid 1px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 100px;
+    top: 50%;
+    margin-top: -50px;
+    position: relative;
+}
+
+#btn-snooze {
+    width: 100%;
+    background-color: #008209;
+    color: white;
+}
+
+#display {
+    width: 80%;
+    height: 72%;
+}
+
+#display span {
+    display: block;
+    width: 73px;
+    margin: 8px 1px 0px 4px;
+    float: left;
+    font-size: 3em;
+    text-align: right;
+}
+
+#display span:nth-child(1):after,
+#display span:nth-child(2):after{
+    content: ":";
+    padding-left: 6px;
+    position: relative;
+    top: -4;
+}
+
+#display span:nth-child(3) {
+    width: 64px;
+}
+
+#display span:nth-child(4) {
+    font-size: 1.5em;
+    position: relative;
+    top: 23px;
+    left: -35px;
+}
+
+#ind-alarm,
+#ind-on {
+    position: absolute;
+    top: 37px;
+    left: 230px;
+    display: none;
+}
+
+#ind-on {
+    height: 10px;
+    width: 10px;
+    background-color: #008209;
+    border-radius: 50%;
+    top: 42px;
+}
+
+#btn-set {
+    position: absolute;
+    right: 0px;
+    top: 24px;
+    width: 29%;
+    background-color: #008209;
+    color: white;
+}
+
+#alarm {
+    position: absolute;
+    top: 59px;
+    right: 17px;
+}
+
+#alarm button {
+    background-color: #008209;
+    height: 30px;
+    width: 30px;
+    color: white;
+    font-weight: bold;
+    font-size; 1.5em;
+}
