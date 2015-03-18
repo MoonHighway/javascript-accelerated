@@ -1,6 +1,6 @@
 Javascript Accelerated
 ======================
-This course if a fast paced javascript course designed to get engnieers up to speed with javascript programming.
+This is a fast paced javascript course designed to get engineers up to speed with javascript programming.
 
 Topics
 ------
@@ -34,5 +34,4 @@ Samples
 #### Advanced Arrays
 
 #### Building a jQuery Alarm Clock
-
 
