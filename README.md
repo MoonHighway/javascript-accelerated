@@ -1,18 +1,19 @@
 Javascript Accelerated
 ======================
-This is a fast paced javascript course designed to get engineers up to speed with javascript programming.
+This course is about familiarizing seasoned object oriented engineers to the JavaScript Language. After this day
+developers should feel comfortable creating and debugging simple Javascript applications that load and save data.
 
 Topics
 ------
-* js History
-* Primitives, Objects, and Gotchas
+* JS and ECMA History
+* Primitives, Objects, Gotchas
 * Array Challenges
-* js Frameworks
+* Frameworks
 * Data
-* Data Challenge
+* Loading the NFL
 * Advanced Functions
-* Advanced Arrays
-* Building a jQuery Alarm Clock
+* Debugging
+* Building an Alarm Clock
 
 Samples
 -------
@@ -49,15 +50,6 @@ Samples
 * [modules](http://jsbin.com/gozim/1/edit?js,console,output)
 * [Currying](http://jsbin.com/lumuge/6/edit?js,console)
 * [Chaining](http://jsbin.com/lumuge/7/edit?js,console)
-
-
-### Advanced Arrays and Timing
-
-* [forEach()](http://jsbin.com/veje/1/edit?js,console)
-* [map()](http://jsbin.com/veje/5/edit?js,console)
-* [.indexOf()](http://jsbin.com/veje/4/edit?js,console)
-* [.every() .some() (2-3)](http://jsbin.com/veje/2/edit?js,console)
-* [reduce()](http://jsbin.com/veje/6/edit?js,console)
 
 ### Alarm Clock
 
