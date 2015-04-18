@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <meta charset="utf-8">
+    <title>jQuery Data</title>
+</head>
+<body>
+
+<script>
+    $.ajax({
+        type: "PUT",
+        url: "http://baselayertraining.herokuapp.com/api/snowtooth/lift/Jazz-Cat",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        data: JSON.stringify({status: "closed"}),
+        success: function (data) {
+
+            console.log(data);
+
+            $.ajax({
+                type: "PUT",
+                url: "http://baselayertraining.herokuapp.com/api/snowtooth/lift/Jazz-Cat",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                data: JSON.stringify({status: "open"}),
+                success: function (data) {
+
+                    console.log(data);
+
+
+                }
+            });
+
+        }
+    });
+</script>
+</body>
+</html>

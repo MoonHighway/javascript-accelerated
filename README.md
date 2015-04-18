@@ -38,7 +38,7 @@ Samples
 * [Response Codes](http://www.restapitutorial.com/httpstatuscodes.html)
 * [d3.json](http://jsbin.com/cosumi/1/edit?js,console)
 * [FillText.com](http://jsbin.com/hiyemo/1/edit?output)
-* [Webstorage (1 -3)](http://jsbin.com/hiyemo/1/edit?js,console)
+* [Webstorage (1 -3)](http://jsbin.com/duwe/1/edit?js,console)
 
 
 ### Advanced Functions

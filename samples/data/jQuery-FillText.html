@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <meta charset="utf-8">
+    <title>Mock Data with jQuery</title>
+    <style>
+        table {
+            margin: 2em;
+            border: double;
+            font-family: verdana;
+        }
+
+        table > thead > tr {
+            background-color: blue;
+            color: white;
+        }
+
+        table > tbody > tr:nth-child(even) {
+            background-color: #EEE;
+        }
+    </style>
+</head>
+<body>
+
+<table cellspacing="0" cellpadding="8">
+    <thead>
+    <tr>
+        <th>First</th>
+        <th>Last</th>
+        <th>City</th>
+        <th>State</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+    <tfoot>
+    <tr>
+        <td colspan="4">
+            names generated from <a
+                href="http://www.filltext.com/?rows=100&fname={firstName}&lname={lastName}&city={city}&state={usState}&pretty=true">Fill
+            Text</a>
+        </td>
+    </tr>
+    </tfoot>
+</table>
+
+<script>
+    $.getJSON('http://www.filltext.com/?rows=100&fname={firstName}&lname={lastName}&city={city}&state={usState}', function (data) {
+
+        console.log(Array.isArray(data));
+
+
+        data.forEach(function (user) {
+
+
+            var tr = $('<tr>').appendTo('tbody');
+
+            $('<td>').text(user.fname).appendTo(tr);
+            $('<td>').text(user.lname).appendTo(tr);
+            $('<td>').text(user.city).appendTo(tr);
+            $('<td>').text(user.state).appendTo(tr);
+
+        });
+
+    });
+</script>
+</body>
+</html>

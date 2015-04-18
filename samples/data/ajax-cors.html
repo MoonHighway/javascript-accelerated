@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AJAX with CORS</title>
+</head>
+<body>
+<script>
+    var url = "http://baselayertraining.herokuapp.com/api/nfl";
+
+    var xhr = new XMLHttpRequest();
+    if ("withCredentials" in xhr) {
+        xhr.open("GET", url, true);
+    } else if (typeof XDomainRequest != "undefined") {
+        xhr = new XDomainRequest();
+        xhr.open("GET", url);
+    } else {
+        alert("Sorry, cannot do a Cross Domain request in this browser.");
+    }
+
+    xhr.onreadystatechange = function () {
+        console.log("Ready State: " + readyStates[this.readyState]);
+        if (this.readyState == 4) {
+            dataLoaded(null, JSON.parse(this.responseText));
+        }
+    };
+
+    xhr.open("GET", url, true);
+    xhr.send(null);
+
+
+    var readyStates = {
+        0: 'request not initialized',
+        1: 'server connection established',
+        2: 'request received',
+        3: 'processing request',
+        4: 'request finished and response is ready',
+    };
+
+    function dataLoaded(err, data) {
+        if (err) {
+            alert("Error: " + err.message);
+        }
+        console.log(data);
+    }
+</script>
+</body>
+</html>

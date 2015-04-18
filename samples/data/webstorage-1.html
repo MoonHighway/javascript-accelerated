@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Web Storage</title>
+</head>
+<body>
+
+<script id="jsbin-javascript">
+    if (localStorage) {
+
+        var student = {
+            name: "Leroy Brown",
+            email: "leroy.brown@chicity.com"
+        };
+
+        //
+        // Saving the Data
+        //
+
+        localStorage.student = JSON.stringify(student);
+
+    }
+</script>
+</body>
+</html>
