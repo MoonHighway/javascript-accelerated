@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Regular Expressions</title>
+</head>
+<body>
+
+<script>
+    var i,
+            RegEmail = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/,
+            AllSpaces = / /g,
+            colors = ["Red", "White", "Blue", "Rouge", "Yeller"],
+            America = new RegExp("red|white|blue");
+
+    console.log(RegEmail.test("alex@moonhighway.com"));
+    console.log(RegEmail.test("alex@moonhighway"));
+
+    console.log("Alexander Wayne Banks".replace(AllSpaces, "-"));
+
+    for (i = 0; i < colors.length; i++) {
+
+        console.log(colors[i] + " is American? " + America.test(colors[i].toLowerCase()));
+
+    }
+
+
+</script>
+</body>
+</html>

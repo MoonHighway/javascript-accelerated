@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="description" content="(JS1) Lesson C - Objects"/>
+    <meta charset=utf-8/>
+    <title>Objects</title>
+    <style id="jsbin-css">
+        p.car {
+            position: absolute;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Objects</h1>
+</header>
+<section>
+</section>
+<script>
+    window.onload = function () {
+
+        var car = {};
+
+        car.make = "Subaru";
+        car.model = "Legacy";
+        car.year = "2005";
+        car.display = function (targ) {
+            p = document.createElement('p');
+            p.className = "car";
+            p.innerHTML = this.make + ", " + this.model + ", " + this.year;
+            targ.appendChild(p);
+        };
+
+        alert(car.make);
+        car.display(document.getElementsByTagName('section')[0]);
+
+    };
+</script>
+</body>
+</html>

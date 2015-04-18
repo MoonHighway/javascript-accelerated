@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="description" content="(JS1) Lesson C - Object Literal Notation"/>
+    <meta charset=utf-8/>
+    <title>Object Literal Notation</title>
+    <style id="jsbin-css">
+        p.car {
+            position: absolute;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Object Literal Notation</h1>
+</header>
+<section>
+</section>
+<script>
+    window.onload = function () {
+
+        var car = {
+            make: "Subaru",
+            model: "Legacy",
+            year: "2005",
+            display: function (targ) {
+                p = document.createElement('p');
+                p.className = "car";
+                p.innerHTML = this.make + ", " + this.model + ", " + this.year;
+                targ.appendChild(p);
+            }
+        };
+
+        alert(car.make);
+        car.display(document.getElementsByTagName('section')[0]);
+
+    };
+</script>
+</body>
+</html>
