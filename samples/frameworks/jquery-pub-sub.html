@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="description" content="(MHJQ) UI Sample - Custom Events"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <meta charset=utf-8/>
+    <title>Custom Events : Click Counter</title>
+    <style>
+        div {
+            width: 4em;
+            height: 4em;
+            background-color: blue;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+<script id="jsbin-javascript">
+    $(document).ready(function () {
+
+        var clickCount = 0;
+
+        $('div').on('tooManyClicks', function (e, message, count) {
+            alert(count + " clicks! " + message);
+        });
+
+        $('div').on('blueClick', function (e, count) {
+            alert("The Box has Been Clicked " + count + ((count > 1) ? " times" : " time"));
+        });
+
+        $('div').click(function (e) {
+
+            if (++clickCount > 3) {
+                $(this).trigger('tooManyClicks', ['Whoa Broa, that\'s too many clicks', clickCount]);
+                return;
+            }
+
+            $(this).trigger('blueClick', clickCount);
+
+        });
+
+    });
+</script>
+</body>
+</html>
