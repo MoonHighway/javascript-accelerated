@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <meta charset="utf-8">
+    <title>Binding, Currying, Chaining</title>
+</head>
+<body>
+
+<script>
+    function section(txt) {
+
+        var s = document.createElement('section');
+        s.innerText = txt;
+        document.body.appendChild(s);
+
+        return {
+            height: function (h) {
+                s.style.height = h + 'px';
+                return this;
+            },
+            width: function (w) {
+                s.style.width = w + 'px';
+                return this;
+            },
+            bg: function (c) {
+                s.style.backgroundColor = c;
+                return this;
+            },
+            color: function (c) {
+                s.style.color = c;
+                return this;
+            }
+        };
+
+    }
+
+    var yeller = section('Hello World').height(200).width(800).bg('blue').color('yellow');
+    var pink = section('Pink').height(800).width(200).bg('pink').color('red');
+
+</script>
+</body>
+</html>

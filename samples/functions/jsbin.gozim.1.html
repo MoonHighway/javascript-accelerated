@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2015 by moonhighway (http://jsbin.com/gozim/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<body>
+
+<script>
+var Person = (function() {
+
+  var _FirstName = "",
+      _LastName = "";
+
+  return function(nm) {
+
+    if (nm) {
+      nm = nm.split(" ");
+      _FirstName = nm[0];
+      _LastName = nm[1];
+    }
+    
+    this.FirstName = function(s) {
+      _FirstName = (s) ? s : _FirstName;
+      return _FirstName;
+    };
+
+    this.LastName = function(s) {
+      _LastName = (s) ? s : _LastName;
+      return _LastName;
+    };
+    
+    this.Print = function() {
+      return _LastName + ", " + _FirstName;
+    };
+
+  };
+
+
+})();
+
+var Mike = new Person("Michael Jackson");
+
+console.log( Mike.FirstName() );
+console.log( Mike.Print() );
+</script>
+</body>
+</html>

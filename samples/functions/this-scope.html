@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="description" content="(MH) JavaScript - Advanced Functions"/>
+    <meta charset=utf-8/>
+    <title>Advanced Functions Sample - Call and Apply</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        div {
+            background-color: rgba(0, 0, 255, .5);
+        }
+    </style>
+</head>
+<body>
+<script>
+    /*global window, console */
+
+    function Speak(words) {
+        "use strict";
+
+        if (!this || this === window) {
+            throw new Error("Speak needs to be bound to an object");
+        }
+
+        console.log(this.name + " the " + this.type + " has spoken.");
+
+        return (this.type === "Cat") ? this.meow : (arguments[0]) ? arguments[0] : "Hello World";
+
+    }
+
+    var blackCat = {
+
+        name: 'Jungle',
+        type: 'Cat',
+        meow: 'Meow Meow Meow',
+        speak: Speak
+
+    };
+
+
+    console.log(blackCat.speak());
+
+    //console.log( Speak() );
+    //console.log( Speak.apply({ type: "Cat", name: "Biscut", meow: "Meeeeoooowww Ralow!"}) );
+    //console.log( Speak.call({ type: "Computer", name: "Hal" }) );
+    //console.log( Speak.call({ type: "rapper", name: "Dr. Dre" }, "You Better ask somebody") );
+    //console.log( Speak.apply({ type: "poet", name: "Saul Williams" }, ["Now is the essence of my domain and contains all that was and will be."]) );
+
+
+</script>
+</body>
+</html>

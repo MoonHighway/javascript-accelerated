@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8/>
+    <title>Closure Example</title>
+    <style>
+        section > div {
+            height: 100px;
+            width: 100px;
+            background-color: #EEE;
+            float: left;
+            margin: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Click on a box</h1>
+</header>
+<section></section>
+<script>
+    for (var i = 0; i < 45; i++) {
+        var div = document.createElement("div");
+
+        div.onclick = (function (index) {
+            return function () {
+                alert('You clicked on box #' + index);
+            };
+        })(i);
+
+        document.getElementsByTagName("section")[0].appendChild(div);
+    }
+
+
+</script>
+</body>
+</html>

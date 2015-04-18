@@ -44,7 +44,7 @@ Samples
 ### Advanced Functions
 
 * [Functions (1-11)](http://jsbin.com/nexi/1/edit?js,console)
-* [Closures](http://jsbin.com/fibud/1/edit?js,output)
+* [Closures (1, 2)](http://jsbin.com/fibud/1/edit?js,output)
 * [**this** scope](http://jsbin.com/OVelUYAb/7/edit?js,console)
 * [Binding Functions (1-5)](http://jsbin.com/lumuge/1/edit?js,console)
 * [modules](http://jsbin.com/gozim/1/edit?js,console,output)

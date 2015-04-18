@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <meta charset="utf-8">
+    <title>Binding, Currying, Chaining</title>
+</head>
+<body>
+
+<script>
+    //
+    // Currying
+    //
+
+    function logKeys(txt) {
+
+        var header = "*****************    {{txt}}    *****************".replace("{{txt}}", txt);
+
+        return function (data) {
+
+            console.log(header);
+            Object.keys(data).forEach(function (key) {
+                console.log(key + ": " + Object.keys(data[key]));
+            });
+            console.log("\n\n");
+
+        };
+
+    }
+
+
+    $.getJSON('http://baselayertraining.herokuapp.com/api/snowtooth/lifts', logKeys('Snowtooth Lift Names'));
+
+    $.getJSON('http://baselayertraining.herokuapp.com/api/nfl', logKeys('NFL Conference'));
+
+    $.getJSON('http://baselayertraining.herokuapp.com/api/states', logKeys('US Regions'));
+
+</script>
+</body>
+</html>

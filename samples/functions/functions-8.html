@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Functions</title>
+    <style>
+        div {
+
+            height: 5em;
+            width: 5em;
+            background-color: blue;
+            margin: 5em;
+        }
+    </style>
+</head>
+<body>
+<div id="btn">
+</div>
+<script>
+    var person = {
+
+        who: null,
+        what: null,
+        speak: function (obj, complete) {
+
+            if (obj) {
+                this.who = obj.who;
+                this.what = obj.what;
+            }
+
+            console.log(this.who + " is the dj for " + this.what);
+
+            complete();
+        }
+
+    };
+
+    var whenFinishedspeaking = function () {
+
+        console.log(person.who + " has finished speaking");
+
+    };
+
+    person.speak({
+        who: "John Richards",
+        what: "The Morning Show"
+    }, whenFinishedspeaking);
+
+</script>
+</body>
+</html>

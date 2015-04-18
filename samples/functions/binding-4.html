@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Binding, Currying, Chaining</title>
+</head>
+<body>
+
+<script>
+    //
+    // Solution : Bind
+    //
+
+    var lBrown = {
+
+        name: 'Leroy',
+        age: 36,
+
+        bindAll: function () {
+            this.log = this.log.bind(this);
+            this.print = this.print.bind(this);
+        },
+
+        log: function () {
+            console.log(this.name + " is " + this.age + " years old!");
+        },
+
+        print: function () {
+            var p = document.createElement('p');
+            p.innerText = this.name + " is " + this.age + " years old!";
+            document.body.appendChild(p);
+        }
+
+    };
+
+
+    lBrown.bindAll();
+
+    var btn = document.createElement('button');
+
+    btn.innerText = "Click To Log";
+    btn.onmousedown = lBrown.log;
+    btn.onmouseup = lBrown.print;
+
+    document.body.appendChild(btn);
+
+</script>
+</body>
+</html>
